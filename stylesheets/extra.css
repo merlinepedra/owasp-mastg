@@ -1,0 +1,65 @@
+:root {
+  --md-primary-fg-color: #499FFF;
+}
+
+@keyframes pump {
+  0%, 40%, 80%, 100% {
+    transform: scale(1);
+  }
+  20%, 60% {
+    transform: scale(1.15);
+  }
+}
+
+.mas-chip {
+  border: solid 1px var(--md-primary-fg-color);
+  outline:none;
+  text-decoration:none;
+  border-radius: 1.2em;
+  min-width: 5.5em;
+  max-height: 1.6em;
+  padding-left: 0.5em;
+  padding-right: 0.4em;
+}
+
+.md-footer__inner:not([hidden]){
+  display: none;
+}
+
+.mas-blue-hue {
+  filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+}
+
+.mas-mini-app {
+  border-radius: 5px;
+}
+
+.mas-app-row {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+}
+
+.mas-apps-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  margin-left: 20px;
+}
+
+.mas-flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 800px) {
+  .mas-flex-container {
+    flex-direction: column;
+  }
+}
+
+.pump {
+  animation: pump 1000ms ease-out;
+}
+
+.grow:hover { transform: scale(1.05); transition: 0.2s;}
